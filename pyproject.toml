@@ -1,0 +1,13 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["app"]
+addopts = "--cov=integrator --cov-report=term-missing --cov-report=html --cov-fail-under=80"
+
+[tool.coverage.run]
+branch = true
+source = ["integrator"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80
